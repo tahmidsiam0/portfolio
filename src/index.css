@@ -1,0 +1,284 @@
+@import url("https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap");
+@import "tailwindcss";
+
+@theme {
+  --font-primary: "League Spartan", sans-serif;
+  --color-primary: #47445a;
+  --color-secondary: #f1f1fc;
+  --color-third: #cfd6ff;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+a,
+ul,
+li,
+ol {
+  list-style: none;
+  text-decoration: none;
+}
+
+body {
+  background: rgb(11, 9, 37);
+  background: -moz-linear-gradient(
+    90deg,
+    rgba(11, 9, 37, 0.7511379551820728) 0%,
+    rgba(54, 17, 68, 0.7483368347338936) 50%,
+    rgba(106, 28, 93, 0.7455357142857143) 100%
+  );
+  background: -webkit-linear-gradient(
+    90deg,
+    rgba(11, 9, 37, 0.7511379551820728) 0%,
+    rgba(54, 17, 68, 0.7483368347338936) 50%,
+    rgba(106, 28, 93, 0.7455357142857143) 100%
+  );
+  background: linear-gradient(
+    90deg,
+    rgba(11, 9, 37, 0.7511379551820728) 0%,
+    rgba(54, 17, 68, 0.7483368347338936) 50%,
+    rgba(106, 28, 93, 0.7455357142857143) 100%
+  );
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#0b0925",endColorstr="#6a1c5d",GradientType=1);
+}
+
+.shadowPrimary {
+  box-shadow: rgba(0, 0, 0, 0.15) -10px 25px 30px -10px;
+}
+
+.shadowSecondary {
+  box-shadow: rgb(204, 219, 232) 3px 3px 6px 0px inset,
+    rgba(255, 255, 255, 0.5) -3px -3px 6px 1px inset;
+}
+
+.shadowImg {
+  box-shadow: rgba(0, 0, 0, 0.25) -10px -10px 30px -10px;
+}
+
+aside ul li {
+  border-top: 1px solid rgba(0, 0, 0, 0.178);
+  padding: 18px 0;
+}
+
+.myImage img {
+  transform: scaleX(-1);
+  -webkit-transform: scaleX(-1);
+  -moz-transform: scaleX(-1);
+  -ms-transform: scaleX(-1);
+  -o-transform: scaleX(-1);
+}
+
+.card {
+  @apply flex flex-col justify-center w-full h-full items-center bg-secondary pt-2 rounded-xl;
+}
+
+.card-bg {
+  @apply h-18 w-26 bg-gray-400 rounded-xl;
+}
+
+.skillCard {
+  @apply bg-third rounded-xl p-4 text-center h-fit;
+}
+
+.educationCard {
+  position: relative;
+  z-index: 1;
+}
+
+.educationCard::before {
+  z-index: -1;
+  content: "";
+  background: #cfd6ff;
+  position: absolute;
+  left: -36px;
+  top: 0;
+  height: 25px;
+  width: 25px;
+  clip-path: polygon(
+    0 40%,
+    80% 40%,
+    50% 0%,
+    100% 50%,
+    50% 100%,
+    80% 60%,
+    0 60%
+  );
+}
+
+/* ========== button ============ */
+
+/* -------1st */
+.primary-button,
+.primary-button:after {
+  line-height: 40px;
+  /* font-size: 10px; */
+  font-family: "League Spartan", sans-serif;
+  background: linear-gradient(45deg, transparent 5%, #100e32 5%);
+  border: 0;
+  color: #fff;
+  letter-spacing: 3px;
+  box-shadow: 6px 0px 0px #51a2ff;
+  outline: transparent;
+  position: relative;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  font-size: 15px;
+  line-height: 15px;
+  padding: 19px 45px 18px;
+}
+
+.primary-button:after {
+  --slice-0: inset(50% 50% 50% 50%);
+  --slice-1: inset(80% -6px 0 0);
+  --slice-2: inset(50% -6px 30% 0);
+  --slice-3: inset(10% -6px 85% 0);
+  --slice-4: inset(40% -6px 43% 0);
+  --slice-5: inset(80% -6px 5% 0);
+
+  content: "Me";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    45deg,
+    transparent 3%,
+    #00e6f6 3%,
+    #00e6f6 5%,
+    #822172 5%
+  );
+  text-shadow: -3px -3px 0px #f8f005, 3px 3px 0px #00e6f6;
+  clip-path: var(--slice-0);
+}
+
+.primary-button:hover:after {
+  animation: 1s glitch;
+  animation-timing-function: steps(2, end);
+}
+
+@keyframes glitch {
+  0% {
+    clip-path: var(--slice-1);
+    transform: translate(-20px, -10px);
+  }
+  10% {
+    clip-path: var(--slice-3);
+    transform: translate(10px, 10px);
+  }
+  20% {
+    clip-path: var(--slice-1);
+    transform: translate(-10px, 10px);
+  }
+  30% {
+    clip-path: var(--slice-3);
+    transform: translate(0px, 5px);
+  }
+  40% {
+    clip-path: var(--slice-2);
+    transform: translate(-5px, 0px);
+  }
+  50% {
+    clip-path: var(--slice-3);
+    transform: translate(5px, 0px);
+  }
+  60% {
+    clip-path: var(--slice-4);
+    transform: translate(5px, 10px);
+  }
+  70% {
+    clip-path: var(--slice-2);
+    transform: translate(-10px, 10px);
+  }
+  80% {
+    clip-path: var(--slice-5);
+    transform: translate(20px, -10px);
+  }
+  90% {
+    clip-path: var(--slice-1);
+    transform: translate(-10px, 0px);
+  }
+  100% {
+    clip-path: var(--slice-1);
+    transform: translate(0);
+  }
+}
+
+/* ------2nd */
+.secondary-button {
+  letter-spacing: 3px;
+  position: relative;
+  overflow: hidden;
+  color: #18181a;
+  display: inline-block;
+  font-size: 15px;
+  line-height: 15px;
+  padding: 19px 45px 18px;
+  text-decoration: none;
+  cursor: pointer;
+  background: #80669d;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.secondary-button span:first-child {
+  position: relative;
+  transition: color 600ms cubic-bezier(0.48, 0, 0.12, 1);
+  z-index: 10;
+}
+
+.secondary-button span:last-child {
+  color: white;
+  display: block;
+  position: absolute;
+  bottom: 0;
+  transition: all 500ms cubic-bezier(0.48, 0, 0.12, 1);
+  z-index: 100;
+  opacity: 0;
+  top: 50%;
+  left: 50%;
+  transform: translateY(225%) translateX(-50%);
+  height: 14px;
+  line-height: 14px;
+  -webkit-transform: translateY(2250%) translateX(-50%);
+  -moz-transform: translateY(2250%) translateX(-50%);
+  -ms-transform: translateY(2250%) translateX(-50%);
+  -o-transform: translateY(2250%) translateX(-50%);
+}
+
+.secondary-button:after {
+  content: "";
+  position: absolute;
+  bottom: -50%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  transform-origin: bottom center;
+  transition: transform 600ms cubic-bezier(0.48, 0, 0.12, 1);
+  transform: skewY(9.3deg) scaleY(0);
+  z-index: 50;
+  -webkit-transition: transform 600ms cubic-bezier(0.48, 0, 0.12, 1);
+  -moz-transition: transform 600ms cubic-bezier(0.48, 0, 0.12, 1);
+  -ms-transition: transform 600ms cubic-bezier(0.48, 0, 0.12, 1);
+  -o-transition: transform 600ms cubic-bezier(0.48, 0, 0.12, 1);
+}
+
+.secondary-button:hover:after {
+  transform-origin: bottom center;
+  transform: skewY(9.3deg) scaleY(2);
+}
+
+.secondary-button:hover span:last-child {
+  transform: translateX(-50%) translateY(-50%);
+  opacity: 1;
+  transition: all 900ms cubic-bezier(0.48, 0, 0.12, 1);
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  -moz-transform: translateX(-50%) translateY(-50%);
+  -ms-transform: translateX(-50%) translateY(-50%);
+  -o-transform: translateX(-50%) translateY(-50%);
+}

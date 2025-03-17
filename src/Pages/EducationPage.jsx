@@ -9,7 +9,7 @@ import TimelineOppositeContent, {
   timelineOppositeContentClasses,
 } from "@mui/lab/TimelineOppositeContent";
 import { educationData } from "../Components/Education/educationData";
-import InfiniteScroll from "./../../node_modules/react-infinite-scroll-component/dist/index.es";
+import InfiniteScroll from "react-infinite-scroll-component";
 import { BookClose, BookOpen } from "akar-icons";
 
 export default function EducationPage() {
@@ -48,8 +48,6 @@ export default function EducationPage() {
                     <BookOpen size={20} />
                   )}
                 </TimelineDot>
-                {/* <TimelineDot color="secondary" /> */}
-                {/* <p>ds</p> */}
                 <TimelineConnector className="bg-third!" />
               </TimelineSeparator>
               <TimelineContent>

@@ -47,7 +47,7 @@ body {
 }
 
 .shadowPrimary {
-  box-shadow: rgba(0, 0, 0, 0.15) -10px 25px 30px -10px;
+  box-shadow: rgba(0, 0, 0, 0.15) -5px 15px 20px -10px;
 }
 
 .shadowSecondary {

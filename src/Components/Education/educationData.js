@@ -32,7 +32,7 @@ const educationData = [
     {
         title: "JSC",
         course: "Junior School Certificate",
-        year: 2016,
+        year: 2015,
         institute: "Shadhur Para Nazrul Islam High School, Jamalpur",
         GPA: '5.00',
         department: "N/A",
@@ -46,8 +46,8 @@ const educationData = [
         institute: "AL-Ansar Model School, Gazipur",
         GPA: '5.00',
         department: "N/A",
-        description: `Can't really remember anything specific about PSC . Nothing's special/valuable either :(`,
-        instituteInfo: "AL-Ansar Model School is most likely permanently closed. It could also be that the name & the owner of this school have changed",
+        description: `Can't really remember anything specific about PSC . Nothing's special/valuable either. 🙁`,
+        instituteInfo: "AL-Ansar Model School is most likely permanently closed. It could also be that the name & the owner of this school have changed.",
     }
 ]
 

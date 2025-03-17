@@ -28,7 +28,7 @@ export default function EducationPage() {
           loader={<p className="text-center">Loading...</p>}
           endMessage={
             <p className="text-center">
-              <b>End of my educational descriptions</b>
+              <b>This concludes my educational background</b>
             </p>
           }
         >

@@ -14,14 +14,13 @@ export default function StudyCard({ course }) {
   return (
     <>
       {showModal &&
-        document.querySelector("#mainContainer") &&
         createPortal(
           <Modal
             course={course}
             setShowModal={setShowModal}
             blendy={blendy.current}
           />,
-          document.body
+          document.querySelector("#portalContainer")
         )}
 
       <div
@@ -31,7 +30,7 @@ export default function StudyCard({ course }) {
           setShowModal(true);
           blendy.current.toggle(course.title);
         }}
-        className="bg-third educationCard h-35 rounded-xl mt-0 m-7 flex flex-col justify-evenly px-5 shadowPrimary cursor-pointer"
+        className="bg-third educationCard h-35 rounded-xl mt-0 m-7 flex flex-col justify-evenly px-5 shadowPrimary cursor-pointer  font-primary"
       >
         <p className="text-2xl">
           {course.course} ({course.title})

@@ -11,7 +11,7 @@ function App() {
         <div className="flex justify-between">
           <LeftNavBar />
           <div
-            id="mainContainer"
+            id="portalContainer"
             className="bg-[#F1F1FC] rounded-lg h-110 w-260 p-15 my-10 shadowSecondary"
           >
             <Routes>

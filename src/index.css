@@ -1,8 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lobster&display=swap");
 @import "tailwindcss";
 
 @theme {
   --font-primary: "League Spartan", sans-serif;
+  --font-secondary: "Lobster", sans-serif;
   --color-primary: #47445a;
   --color-secondary: #f1f1fc;
   --color-third: #cfd6ff;
@@ -10,6 +12,7 @@
 
 * {
   box-sizing: border-box;
+  /* font-family: "League Spartan", sans-serif; */
 }
 
 a,

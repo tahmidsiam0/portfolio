@@ -4,7 +4,7 @@ import Skills from "../Components/Skills/Skills";
 
 export default function SkillPage() {
   return (
-    <div className="flex gap-10">
+    <div className="flex gap-10 relative">
       <Skills />
       <ProgressSkills />
       <OtherSkills />

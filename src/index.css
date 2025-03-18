@@ -64,12 +64,8 @@ aside ul li {
   padding: 18px 0;
 }
 
-.myImage img {
-  transform: scaleX(-1);
-  -webkit-transform: scaleX(-1);
-  -moz-transform: scaleX(-1);
-  -ms-transform: scaleX(-1);
-  -o-transform: scaleX(-1);
+.dp {
+  clip-path: polygon(50% 0%, 112% 50%, 50% 82%, -13% 50%);
 }
 
 .card {
@@ -115,13 +111,12 @@ aside ul li {
 .primary-button,
 .primary-button:after {
   line-height: 40px;
-  /* font-size: 10px; */
   font-family: "League Spartan", sans-serif;
   background: linear-gradient(45deg, transparent 5%, #100e32 5%);
   border: 0;
   color: #fff;
   letter-spacing: 3px;
-  box-shadow: 6px 0px 0px #51a2ff;
+  box-shadow: 6px 0px 0px #8632df;
   outline: transparent;
   position: relative;
   user-select: none;

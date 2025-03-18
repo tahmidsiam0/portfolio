@@ -55,7 +55,7 @@ export default function Modal({ setShowModal, blendy, course }) {
 
         <div
           data-blendy-to={course.title}
-          className="modal bg-third rounded-lg h-110 w-260 p-15 m-10 shadowSecondary absolute top-7 right-5 z-30 grid grid-cols-2"
+          className="modal bg-third rounded-lg h-110 w-260 p-15 shadowSecondary absolute z-30 grid grid-cols-2"
         >
           {/* First modal closing button */}
           <button

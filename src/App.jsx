@@ -5,6 +5,8 @@ import LeftNavBar from "./Components/Navigation/LeftNavBar";
 import EducationPage from "./Pages/EducationPage";
 import { useEffect, useState } from "react";
 import ConstructionImage from "./assets/Images/construction.png";
+import NothingFoundPage from "./Pages/NothingFoundPage";
+import AnimatedShape from "./assets/Images/Animated.svg";
 
 function App() {
   const [construction, setConstruction] = useState(false);
@@ -17,7 +19,7 @@ function App() {
 
   return (
     <>
-      {construction && (
+      {/* {construction && (
         <div className="fixed inset-0 z-50 flex flex-col justify-evenly items-center backdrop-blur-sm pb-5 transition-all duration-500">
           <div className="fixed inset-0 bg-black opacity-60"></div>
           <p className="text-white z-1">
@@ -31,19 +33,27 @@ function App() {
             Force Visit
           </button>
         </div>
-      )}
+      )} */}
       <div className="font-primary w-full py-7 pe-15">
         <div className="flex justify-between">
           <LeftNavBar />
           <div
             id="portalContainer"
-            className="bg-[#F1F1FC] rounded-lg h-110 w-260 p-15 my-10 shadowSecondary"
+            className="bg-[#F1F1FC] rounded-lg h-110 w-260 my-10 shadowSecondary relative"
           >
-            <Routes>
-              <Route path="/" element={<Homepage />} />
-              <Route path="/skills" element={<SkillPage />} />
-              <Route path="/education" element={<EducationPage />} />
-            </Routes>
+            <img
+              className="absolute"
+              src={AnimatedShape}
+              alt="Animated Shape"
+            />
+            <div className="h-full w-full px-15 py-10 absolute">
+              <Routes>
+                <Route path="/" element={<Homepage />} />
+                <Route path="/skills" element={<SkillPage />} />
+                <Route path="/education" element={<EducationPage />} />
+                <Route path="*" element={<NothingFoundPage />} />
+              </Routes>
+            </div>
           </div>
         </div>
       </div>

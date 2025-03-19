@@ -1,42 +1,45 @@
-// import { useEffect, useState } from "react";
-// import SyntaxHighlighter from "react-syntax-highlighter";
+import SyntaxHighlighter from "react-syntax-highlighter";
+import { motion } from "framer-motion";
+import { dracula } from "react-syntax-highlighter/dist/esm/styles/hljs";
+import { solarizedlight } from "react-syntax-highlighter/dist/esm/styles/prism";
 // import { motion } from "motion/react";
-// import { docco } from "react-syntax-highlighter/dist/esm/styles/hljs";
-// import { oneDark } from "react-syntax-highlighter/dist/esm/styles/prism";
-// const jsonData = {
-//   Developer: {
-//     tech: "React",
-//     experience: "Fresher",
-//     projects: "10+",
-//     openToWork: true,
-//   },
-// };
+const jsonData = `const Developer = () => {
+    const [openToWork, setOpenToWork] = useState(true);
+    return  <div> 
+                <Experience>Fresher</Experience>
+                <Project count="10+" />
+            </div>
+};`;
 
-// export default function DeveloperSnippet() {
-//   const [text, setText] = useState("");
-//   const jsonString = JSON.stringify(jsonData, null, 2);
+const customStyle = {
+  color: "grey",
+  borderRadius: "7px",
+  borderTopLeftRadius: 0,
+  borderTopRightRadius: 0,
+  fontStyle: "italic",
+  fontSize: "15px",
+  padding: "5px",
+  margin: 0,
+};
 
-//   useEffect(() => {
-//     let i = 0;
-//     const interval = setInterval(() => {
-//       setText(jsonString.slice(0, i));
-//       i++;
-//       if (i > jsonString.length) clearInterval(interval);
-//     }, 30);
-//     return () => clearInterval(interval);
-//   }, [jsonString]);
-
-//   return (
-//     <motion.div
-//       initial={{ opacity: 0, y: 10 }}
-//       animate={{ opacity: 1, y: 0 }}
-//       transition={{ duration: 0.5 }}
-//       className="max-w-xl mx-auto bg-gray-900 text-white p-4 rounded-lg shadow-lg"
-//     >
-//       <div className="text-green-400 text-sm mb-2">// Developer Info</div>
-//       <SyntaxHighlighter language="json" style={oneDark}>
-//         {text || "{}"}
-//       </SyntaxHighlighter>
-//     </motion.div>
-//   );
-// }
+export default function DeveloperSnippet() {
+  return (
+    <motion.div
+      initial={{ opacity: 0, scale: 0.5 }}
+      animate={{ opacity: 1, scale: 1 }}
+      transition={{ duration: 1 }}
+      className="bg-gray-800 rounded-lg"
+    >
+      <div className="text-[#8632DF] text-sm m-2">// Developer Info</div>
+      <SyntaxHighlighter
+        showLineNumbers={true}
+        wrapLongLines={true}
+        language="jsx"
+        style={dracula}
+        customStyle={customStyle}
+      >
+        {jsonData}
+      </SyntaxHighlighter>
+    </motion.div>
+  );
+}

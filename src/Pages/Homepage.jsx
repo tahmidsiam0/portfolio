@@ -5,7 +5,7 @@ import { TextPlugin } from "gsap/all";
 import { useGSAP } from "./../../node_modules/@gsap/react/src/index";
 import NeonBG from "../assets/Images/nnneon.svg";
 import { Link } from "react-router-dom";
-// import DeveloperSnippet from "./../Components/Common/DeveloperSnippet";
+import DeveloperSnippet from "./../Components/Common/DeveloperSnippet";
 gsap.registerPlugin(TextPlugin);
 
 export default function Homepage() {
@@ -21,17 +21,17 @@ export default function Homepage() {
   return (
     <>
       <div className="details flex h-full">
-        <div className="info w-2/3 flex flex-col justify-between h-full">
+        <div className="info pe-20 w-2/3 flex flex-col justify-between h-full">
           <p>Hey, I'm</p>
-          <p className="text-7xl my-2">Tahmid Hossen</p>
-          <p ref={animationRef} className="mt-3"></p>
-          <p className="mb-5">
+          <p className="text-7xl mt-2">Tahmid Hossen</p>
+          <p ref={animationRef}></p>
+          {/* <p className="mb-5">
             You can simply call me <strong className="text-2xl">Siam</strong>
-          </p>
-          {/* <DeveloperSnippet /> */}
-          <Link to="contact">
+          </p> */}
+          <DeveloperSnippet />
+          {/* <Link to="contact">
             <button className="primary-button cursor-pointer">Contact</button>
-          </Link>
+          </Link> */}
         </div>
 
         <div className="w-1/3 h-full relative text-center flex items-end justify-center">

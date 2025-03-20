@@ -1,9 +1,9 @@
 import DP from "../assets/Images/DisplayPic-removebg-preview.png";
 import { gsap } from "gsap";
 import { TextPlugin } from "gsap/all";
-import { useGSAP } from "./../../node_modules/@gsap/react/src/index";
 import NeonBG from "../assets/Images/nnneon.svg";
 import DeveloperSnippet from "./../Components/Common/DeveloperSnippet";
+import { useGSAP } from "@gsap/react/src";
 gsap.registerPlugin(TextPlugin);
 
 export default function Homepage() {
@@ -21,7 +21,7 @@ export default function Homepage() {
         opacity: 100,
       })
       .to("#devText", {
-        duration: 2,
+        duration: 1.5,
         text: "Front End based web developer",
         opacity: 100,
       })
@@ -92,7 +92,7 @@ export default function Homepage() {
             src={DP}
             alt="Display Picture of Tahmid Hossen"
           />
-          <button className="secondary-button">
+          <button className="secondary-button transition-all duration-500">
             <span>Resume</span>
             <span>Download</span>
           </button>

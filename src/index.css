@@ -8,6 +8,7 @@
   --color-primary: #47445a;
   --color-secondary: #f1f1fc;
   --color-third: #cfd6ff;
+  --color-fourth: #80669d;
 }
 
 * {
@@ -54,12 +55,10 @@ body {
 .shadowPrimary {
   box-shadow: rgba(0, 0, 0, 0.15) -5px 15px 20px -10px;
 }
-
 .shadowSecondary {
   box-shadow: rgb(204, 219, 232) 3px 3px 6px 0px inset,
     rgba(255, 255, 255, 0.5) -3px -3px 6px 1px inset;
 }
-
 .shadowImg {
   box-shadow: rgba(0, 0, 0, 0.25) -10px -10px 30px -10px;
 }
@@ -73,16 +72,31 @@ aside ul li {
   clip-path: polygon(50% 0%, 112% 50%, 50% 82%, -13% 50%);
 }
 
+/* ---------- Applied css classname for clarity ---------- */
+/* ===== skill section ===== */
 .card {
   @apply flex flex-col justify-center w-full h-full items-center bg-secondary pt-2 rounded-xl;
 }
-
 .card-bg {
   @apply h-18 w-26 bg-gray-400 rounded-xl;
 }
-
 .skillCard {
   @apply bg-third rounded-xl p-4 text-center h-fit;
+}
+
+/* ===== contact section ===== */
+.input {
+  @apply w-full h-[30px] text-[14px] border-0 border-b border-gray-400 bg-transparent outline-none appearance-none focus:border-black;
+}
+.label {
+  @apply absolute top-0 left-0 h-[30px] leading-[30px] cursor-text transition-all duration-150 
+    peer-placeholder-shown:translate-y-0 
+    peer-focus:-translate-y-5 peer-focus:text-[0.825em] 
+    peer-not-placeholder-shown:-translate-y-5 peer-not-placeholder-shown:text-[0.825em];
+  pointer-events: none;
+}
+.underline {
+  @apply absolute bottom-[-1px] left-0 block h-[2px] w-0 bg-black transition-all duration-150 peer-focus:w-full;
 }
 
 .educationCard {
@@ -111,7 +125,6 @@ aside ul li {
 }
 
 /* ========== button ============ */
-
 /* -------1st */
 .primary-button,
 .primary-button:after {
@@ -131,7 +144,6 @@ aside ul li {
   line-height: 15px;
   padding: 19px 45px 18px;
 }
-
 .primary-button:after {
   --slice-0: inset(50% 50% 50% 50%);
   --slice-1: inset(80% -6px 0 0);
@@ -157,12 +169,10 @@ aside ul li {
   text-shadow: -3px -3px 0px #f8f005, 3px 3px 0px #00e6f6;
   clip-path: var(--slice-0);
 }
-
 .primary-button:hover:after {
   animation: 1s glitch;
   animation-timing-function: steps(2, end);
 }
-
 @keyframes glitch {
   0% {
     clip-path: var(--slice-1);
@@ -212,28 +222,18 @@ aside ul li {
 
 /* ------2nd */
 .secondary-button {
+  @apply transition-all rounded-lg opacity-0 relative overflow-hidden cursor-pointer bg-fourth;
   letter-spacing: 3px;
-  position: relative;
-  overflow: hidden;
-  color: #18181a;
-  display: inline-block;
-  font-size: 15px;
-  line-height: 15px;
-  padding: 19px 45px 18px;
-  text-decoration: none;
-  cursor: pointer;
-  background: #80669d;
+  padding: 15px 35px 13px;
   user-select: none;
   -webkit-user-select: none;
   touch-action: manipulation;
 }
-
 .secondary-button span:first-child {
   position: relative;
   transition: color 600ms cubic-bezier(0.48, 0, 0.12, 1);
   z-index: 10;
 }
-
 .secondary-button span:last-child {
   color: white;
   display: block;
@@ -252,7 +252,6 @@ aside ul li {
   -ms-transform: translateY(2250%) translateX(-50%);
   -o-transform: translateY(2250%) translateX(-50%);
 }
-
 .secondary-button:after {
   content: "";
   position: absolute;
@@ -270,12 +269,10 @@ aside ul li {
   -ms-transition: transform 600ms cubic-bezier(0.48, 0, 0.12, 1);
   -o-transition: transform 600ms cubic-bezier(0.48, 0, 0.12, 1);
 }
-
 .secondary-button:hover:after {
   transform-origin: bottom center;
   transform: skewY(9.3deg) scaleY(2);
 }
-
 .secondary-button:hover span:last-child {
   transform: translateX(-50%) translateY(-50%);
   opacity: 1;

@@ -92,7 +92,7 @@ export default function Homepage() {
             src={DP}
             alt="Display Picture of Tahmid Hossen"
           />
-          <button className="transition-all secondary-button rounded-4xl active:scale-95 scale-80 opacity-0">
+          <button className="secondary-button">
             <span>Resume</span>
             <span>Download</span>
           </button>

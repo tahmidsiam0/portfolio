@@ -15,7 +15,7 @@ export default function LeftNavBar() {
           <Link to="/">Home</Link>
         </li>
         <li>
-          <Link to="/work">Work</Link>
+          <Link to="/works">Work</Link>
         </li>
         <li>
           <Link to="/skills">Skills</Link>

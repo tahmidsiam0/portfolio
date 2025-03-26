@@ -8,6 +8,7 @@ import ConstructionImage from "./assets/Images/construction.png";
 import NothingFoundPage from "./Pages/NothingFoundPage";
 import AnimatedShape from "./assets/Images/Animated.svg";
 import ContactPage from "./Pages/ContactPage";
+import WorkPage from "./Pages/WorkPage";
 
 function App() {
   // const [construction, setConstruction] = useState(false);
@@ -50,6 +51,7 @@ function App() {
             <div className="h-full w-full px-15 py-10 absolute">
               <Routes>
                 <Route path="/" element={<Homepage />} />
+                <Route path="/works" element={<WorkPage />} />
                 <Route path="/skills" element={<SkillPage />} />
                 <Route path="/education" element={<EducationPage />} />
                 <Route path="/contact" element={<ContactPage />} />

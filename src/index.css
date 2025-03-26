@@ -129,6 +129,19 @@ aside ul li {
   );
 }
 
+body::-webkit-scrollbar {
+  width: 1em;
+}
+
+body::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+
+body::-webkit-scrollbar-thumb {
+  outline: 3rem solid #333333;
+  background-color: #f5f5f5;
+}
+
 /* ========== button ============ */
 /* -------1st */
 .primary-button,
@@ -286,4 +299,17 @@ aside ul li {
   -moz-transform: translateX(-50%) translateY(-50%);
   -ms-transform: translateX(-50%) translateY(-50%);
   -o-transform: translateX(-50%) translateY(-50%);
+}
+
+/* ========== custom scrollbar ========== */
+.scrollbar::-webkit-scrollbar {
+  width: 1px;
+}
+
+.scrollbar::-webkit-scrollbar-track {
+  background-color: #cfd6ff;
+}
+
+.scrollbar::-webkit-scrollbar-thumb {
+  background: #895483;
 }

@@ -23,6 +23,7 @@ export default function EducationPage() {
         }}
       >
         <InfiniteScroll
+          className="scrollbar"
           height={320}
           dataLength={1}
           loader={<p className="text-center">Loading...</p>}

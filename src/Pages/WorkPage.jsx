@@ -14,16 +14,20 @@ export default function WorkPage() {
         dataLength={2}
         loader={<p className="text-center">Loading...</p>}
       >
-        <div className="grid grid-cols-3 gap-10 justify-center w-full overflow-hidden mb-8">
-          {workData.map((work, index) => (
-            <WorkCard work={work} key={index} />
-          ))}
+        <div className="grid grid-cols-3 gap-10 justify-center w-full overflow-hidden mb-5">
+          {workData.map((work, index) => {
+            if (index < 3) {
+              return <WorkCard work={work} key={index} />;
+            }
+          })}
         </div>
         {seeMore && (
           <div className="grid grid-cols-3 gap-10 justify-center w-full overflow-hidden">
-            <WorkCard />
-            <WorkCard />
-            <WorkCard />
+            {workData.map((work, index) => {
+              if (index > 2) {
+                return <WorkCard work={work} key={index} />;
+              }
+            })}
           </div>
         )}
       </InfiniteScroll>

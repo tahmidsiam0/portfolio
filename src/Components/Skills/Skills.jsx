@@ -5,27 +5,14 @@ import {
   JqueryFill,
   ReactFill,
 } from "akar-icons";
-import { useEffect, useRef } from "react";
-import { createSwapy } from "swapy";
 import SkillCard from "./SkillCard";
 import "boxicons";
 
 export default function Skills() {
-  const swapy = useRef(null);
-  const container = useRef(null);
-
-  useEffect(() => {
-    if (container.current) {
-      swapy.current = createSwapy(container.current);
-    }
-
-    return () => swapy.current?.destroy();
-  }, []);
-
   return (
     <div className="skillCard shadowPrimary">
       <h1 className="text-2xl mb-2">Major</h1>
-      <div className="grid grid-cols-2 gap-5" ref={container}>
+      <div className="grid grid-cols-2 gap-5">
         <SkillCard title="HTML" slot="a">
           <HtmlFill fill="#FC490B" />
         </SkillCard>

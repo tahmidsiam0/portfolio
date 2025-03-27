@@ -1,10 +1,9 @@
 import { useEffect } from "react";
 
-export default function ImageModal({ img, title, blendy, setShowImgModal }) {
+export default function ImageModal({ img, setShowImgModal }) {
   useEffect(() => {
     const handleKeyDown = (e) => {
-      if (e.key === "Escape")
-        blendy.untoggle(title, () => setShowImgModal(false));
+      if (e.key === "Escape") setShowImgModal(false);
     };
     document.addEventListener("keydown", handleKeyDown);
     return () => document.removeEventListener("keydown", handleKeyDown);
@@ -12,17 +11,14 @@ export default function ImageModal({ img, title, blendy, setShowImgModal }) {
 
   return (
     <>
-      <div
-        className="flex justify-center items-center fixed inset-0 z-40"
-        data-blendy-to={title}
-      >
+      <div className="flex justify-center items-center fixed inset-0 z-40">
         <div
           className={`fixed inset-0 transition-all duration-300 backdrop-blur-sm
           `}
         ></div>
         <div
           className="bg-black fixed inset-0 opacity-50 backdrop-blur-md transition-all duration-300"
-          onClick={() => blendy.untoggle(title, () => setShowImgModal(false))}
+          onClick={() => setShowImgModal(false)}
         ></div>
         <div className="flex items-center justify-center relative z-50"></div>
         <img

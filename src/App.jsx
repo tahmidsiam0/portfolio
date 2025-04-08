@@ -11,17 +11,17 @@ import ContactPage from "./Pages/ContactPage";
 import WorkPage from "./Pages/WorkPage";
 
 function App() {
-  // const [construction, setConstruction] = useState(false);
+  const [construction, setConstruction] = useState(false);
 
-  // useEffect(() => {
-  //   setTimeout(() => {
-  //     setConstruction(true);
-  //   }, 2000);
-  // }, []);
+  useEffect(() => {
+    setTimeout(() => {
+      setConstruction(true);
+    }, 2000);
+  }, []);
 
   return (
     <>
-      {/* {construction && (
+      {construction && (
         <div className="fixed inset-0 z-50 flex flex-col justify-evenly items-center backdrop-blur-sm pb-5 transition-all duration-500">
           <div className="fixed inset-0 bg-black opacity-60"></div>
           <p className="text-white z-1">
@@ -35,7 +35,7 @@ function App() {
             Force Visit
           </button>
         </div>
-      )} */}
+      )}
       <div className="font-primary w-full py-7 pe-15">
         <div className="flex justify-between">
           <LeftNavBar />

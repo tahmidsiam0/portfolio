@@ -67,7 +67,7 @@ export default function Modal({ setShowModal, course }) {
 
           <div className="flex flex-col text-center justify-center items-center relative">
             <div className="w-fit h-60 flex justify-center">
-              {/* Blendy for starting the second modal */}
+              {/* starting the second modal */}
               <Divider
                 onClick={() => setShowImgModal(true)}
                 className="relative"
